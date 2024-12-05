@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        function guardarDatosLS() {
+            const usr = document.getElementById("usuario").value ;
+            const pas = document.getElementById("passwd").value ;
+            localStorage.setItem("lsusr",usr) ;
+            localStorage.setItem("lspas",pas) ;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="guardarDatosLS(); return false;">
+        <label for="usuario">Usuario</label>
+        <input type="email" id="usuario" name="usuario" placeholder="ingrese email" required/>
+        <br>
+        <label for="passwd">Contraseña</label>
+        <input type="text" id="passwd" name="passwd" placeholder="contraseña" required/>
+        <br>
+        <label for="msg">Mensaje</label>
+        <textarea name="msg" id="msg" rows="5" cols="50" placeholder="que quieres decir hoy"></textarea>
+        <br>
+        <label class="resaltar"  for="genero">Genero</label>
+        <input type="radio" name="genero" value="M">Masculino
+        <input type="radio" name="genero" value="F">Femenino
+        <br>
+        <label class="resaltar" for="pastie">Pasatiempos</label>
+        <input type="checkbox" name="pastie" value="L">Lectura
+        <input type="checkbox" name="pastie" value="T">Trotar
+        <input type="checkbox" name="pastie" value="D">Dormir
+        <input type="checkbox" name="pastie" value="Tv">Televisión
+        <br>
+        <input type="submit" value="Enviar"/>
+        <input type="reset" value="Borrar"/>
+    </form>
+
+
+</body>
+</html>

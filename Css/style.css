@@ -1,0 +1,25 @@
+
+button, input[type="button"], input[type="submit"] {
+    color: rgb(0, 0, 0);
+    background-color: rgb(48, 48, 171);
+    transition-property: all;
+    transition-duration: 0.7s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+}
+button:hover, input[type="button"]:hover, input[type="submit"]:hover{
+    background-color: rgb(99, 114, 157);
+    cursor: pointer;
+    color: rgb(255, 162, 0);
+    transform: scale(1.2);
+    border-radius: 20px;
+}
+
+.Fondo {
+    background-color: rgb(108, 96, 143);
+    }
+
+    body {
+       display: flex;
+        justify-content: center;
+    }

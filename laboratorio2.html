@@ -2,23 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="RAGAR">
-    <meta name="keywords" content="li, td, ul, ol, img...">
+    <meta name="author" content="Andres Felpe carvajal">
+    <meta name="keywords" content="Proyecto laboratorio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FullStack G-70</title>
     <link rel="icon" href="img/favicon.ico">
-    <style>
-        .resaltar{
-            background-color: aqua;
-            color: red;
-            font-weight: bold;
-        }
-        .cuerpotabla{
-            background-color: bisque;
-            color: darkblue;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 
     <script>
         function guardarDatosLS() {
@@ -30,7 +19,7 @@
             localStorage.setItem("e"+tar, est);
         }
         
-        //Eso consulata la tarea
+        //Eso consulta la tarea
         function consultarTarea() { 
             const tar = document.getElementById("Tarea").value ;
             const des = localStorage.getItem("d"+tar);
@@ -57,7 +46,7 @@
     </script>
 
 </head>
-    <body style="background-color: beige;">
+<body class="Fondo">
         
         <section id="formularios">
             <hr>
@@ -67,10 +56,12 @@
             <form onsubmit="guardarDatosLS(); return false;">
                 <label for="Tarea">Nombre de Tarea:</label>
                 <input type="text" name="Tarea" id="Tarea" placeholder="Escriba su Tarea">
-                <br> <br>
+                <br>
+                <br>
                 <label for="Descripcion">Descripción:</label>
                 <input type="text" name="Descripcion" id="Descripcion" placeholder="Escriba su Descripción">
-                <br> <br>
+                <br>
+                <br>
                 <label for="Estado">Estado:</label>
                 <input type="text" name="Estado" id="Estado" placeholder="Escriba su Estado">
                 <br>
@@ -81,10 +72,6 @@
                 <input type="button" onclick="eliminarTarea()" value="Eliminar"/>
             </form>
        </section>
-
-       
-
-
 
     </body>
 </html>
